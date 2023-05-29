@@ -29,8 +29,7 @@ body {
 
 .left {
     width: 200px;       
-    padding: 0 10px;
-    position: relative;
+    padding: 0 10px;   
     border-right: 1px solid #999;
 }
 
@@ -41,15 +40,31 @@ body {
 }
 
 .gnb {
+    position: absolute;    
     margin-top: 140px;
     text-align: center;
+    width: 180px;
+    background-color: #ccc;
+    top: 0;
+    left: 10px;
+    width: calc(100% - 10px);
+    z-index: 100;
+    overflow: hidden;
 }
+
+.gnb > li {
+    position: relative;
+    background-color: #fff;
+}
+
+
 
 .gnb > li > a {
     display: block;
     padding: 12px;
     border: 1px solid #666;
-    margin-top: -1px;
+    width: 180px;
+    background-color: #fff;
 }
 
 .gnb > li:hover > a {
@@ -57,19 +72,23 @@ body {
 }
 
 .gnb ul {
-    border: 1px solid #999;
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    display: flex;
 }
+
 
 .gnb ul li a {
     display: block;
     padding: 10px;
+    width: 180px;
 }
 
 .gnb ul li a:hover {
-    background-color: #ddd;
+    background-color: #222;
+    color: #fff;
 }
-
 
 .member {
     margin-top: 30px;
@@ -244,7 +263,6 @@ body {
 }
 
 
-
 .notice {
     border: 1px solid #999;
     padding: 12px 40px;
@@ -338,6 +356,5 @@ body {
     display: block;
     width: 100%;
 }
-
 
 

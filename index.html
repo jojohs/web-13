@@ -158,12 +158,13 @@
 
     <script>
         // 메뉴
-        $('.gnb > li').hover(
+        $('.gnb').hover(
             function () {
-                $(this).find('ul').stop().slideDown()
+                var value = $(window).width() - 10
+                $(this).stop().animate({ width: value},'fast')
             },
             function () {
-                $(this).find('ul').stop().slideUp()
+                $(this).stop().animate({ width: 180 },'fast')
             },
         )
 
